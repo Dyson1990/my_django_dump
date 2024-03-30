@@ -1,0 +1,35 @@
+/* core/static/core/css/home.css */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.fullscreen-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('{% static "core/images/home.png" %}');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.cyberpunk-title {
+  color: #f0f;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5);
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  font-size: 4em;
+  margin-top: 20%;
+}
+
+.cyberpunk-text {
+  color: #ff0;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
