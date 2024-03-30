@@ -1,35 +1,50 @@
-/* core/static/core/css/home.css */
-body {
+/* core/css/home.css */
+.cyberpunk-body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: 'Arial', sans-serif;
+  background: url(../img/home.png) no-repeat center center / cover;
 }
 
-.fullscreen-background {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url('../img/home.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden;
+.cyberpunk-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+  background-color: rgba(0, 0, 0, 0.7); /* 文字半透明背景 */
+  backdrop-filter: blur(10px); /* 可选：毛玻璃效果 */
+  border-radius: 10px; /* 可选：圆角边框 */
+  padding: 20px 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* 可选：阴影效果 */
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(128, 0, 128, 0.7), 0 0 30px rgba(128, 0, 128, 0.7); /* 加入紫色 */
 }
 
 .cyberpunk-title {
-  color: #f0f;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.5);
-  font-family: 'Courier New', monospace;
-  text-align: center;
-  font-size: 4em;
-  margin-top: 20%;
+  font-size: 3em;
+  font-weight: bold;
+  animation: neonPulse 1.2s ease-in-out infinite alternate;
 }
 
-.cyberpunk-text {
-  color: #ff0;
-  text-align: center;
-  font-size: 1.5em;
-  letter-spacing: 2px;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+.cyberpunk-intro {
+  font-size: 1.2em;
+  line-height: 1.5;
+  animation: neonPulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  0% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(128, 0, 128, 0.7), 0 0 45px rgba(128, 0, 128, 0.7);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 40px rgba(128, 0, 128, 0.9), 0 0 60px rgba(128, 0, 128, 0.9);
+  }
+  100% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(128, 0, 128, 0.7), 0 0 45px rgba(128, 0, 128, 0.7);
+  }
 }
