@@ -17,7 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+# 每增加一个app，就要在这里增加应用的路径
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('tmp_db/', include('tmp_db.urls')),
     path('', include('core.urls')),
 ]
