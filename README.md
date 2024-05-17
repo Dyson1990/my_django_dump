@@ -1,2 +1,2 @@
-# my_django
+# {cfg.proj_name}
 django learning
